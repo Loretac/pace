@@ -20,11 +20,22 @@
 
     <div id="description">
     </div>
+    <div id="submit_div" style="display:none">
+
+        <a href="/creation"> Select product</a>
+        
+    </div>
 
 <script>
 
+// This function runs whenever a product button is clicked. It shows a description of the product and makes a submit button visible.
 function select(buttonID){
 
+    // When product is clicked, show button to select this product for addition to account.
+    var submit_button = document.getElementById("submit_div");
+    submit_button.style.display="";
+
+    // Show description specific to product
     var description = document.getElementById("description");    
     if(buttonID=="savings"){
         description.textContent = "Savings Account: A minimum of $100 deposit required to open this account.";
@@ -41,6 +52,7 @@ function select(buttonID){
     else if(buttonID=="ira_cd"){
         description.textContent = "IRA Certificate of Deposit: A minimum of $10,000 deposit required to open this account.";
     }
+
 }
 
 </script>

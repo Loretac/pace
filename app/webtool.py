@@ -44,7 +44,7 @@ def creation():
 def request_submitted():
     return render_template('request_submitted.html')
 
-@app.route("/account")
+@app.route("/account", methods = ['GET','POST'])
 def account():
     return render_template('account.html')
 
