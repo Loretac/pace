@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Products</title>
+
+</head>
+
+<body>
+    Please choose a product:
+    <button type="button" id="savings" onclick="select(this.id)">Savings</button>
+    <button type="button" id="checking" onclick="select(this.id)">Checking</button>
+    <button type="button" id="money_market" onclick="select(this.id)">Money Market</button>
+    <button type="button" id="cd" onclick="select(this.id)">CD</button>
+    <button type="button" id="ira_cd" onclick="select(this.id)">IRA CD</button>
+
+
+
+    <div id="description">
+    </div>
+
+<script>
+
+function select(buttonID){
+
+    var description = document.getElementById("description");    
+    if(buttonID=="savings"){
+        description.textContent = "Savings Account: A minimum of $100 deposit required to open this account.";
+    }
+    else if(buttonID=="checking"){
+        description.textContent = "Checking Account: A minimum of $500 deposit required to open this account.";
+    }
+    else if(buttonID=="money_market"){
+        description.textContent = "Money Market Account: A minimum of $1,000 deposit required to open this account.";
+    }
+    else if(buttonID=="cd"){
+        description.textContent = "Certificate of Deposit: A minimum of $5,000 deposit required to open this account.";
+    }
+    else if(buttonID=="ira_cd"){
+        description.textContent = "IRA Certificate of Deposit: A minimum of $10,000 deposit required to open this account.";
+    }
+}
+
+</script>
+</body>
+</html>
