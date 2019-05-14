@@ -9,19 +9,28 @@
 </head>
 
 <body>
-    PACE Bank, the nation's #1 bank
+    <img src="{{ url_for('static', filename='images/logo.png') }}" id="logo">
+    <br>
+    PACE Bank, the nation's #1 bank<br><br>
 
-Plese log in:
+Plese log in:<br>
 
 <form method="POST" action="/account">
-    Username:<br>
-    <input type="text" name="Username"><br>
-    Password:<br>
-    <input type="password" name="password"><br>
+    
+    <input type="text" name="Username" placeholder="Username"><br>
+    
+    <input type="password" name="password" placeholder="Password"><br><br>
+    <a href="#" onclick="popup()" > Need help?</a><br><br>
     <input type="submit">
 
 
 
+
+<script>
+function popup(){
+    alert("Please visit your local branch to set up an online account.")
+}
+</script>
 
 </body>
 </html>
